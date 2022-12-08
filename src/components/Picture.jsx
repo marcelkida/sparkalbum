@@ -10,6 +10,7 @@ const Picture = (props) => {
     const y = Math.random() * (window.innerHeight*.9)/2
     const a = Math.random() < 0.5 ? -1 : 1 * 10
 
+
     const { scrollY } = useScroll()
     const scrollVelocity = useVelocity(scrollY)
     const smoothVelocity = useSpring(scrollVelocity, {damping: 0, stiffness: 100, bounce: .5})
@@ -19,10 +20,10 @@ const Picture = (props) => {
     console.log(props.img)
 
     return (
-    <motion.div className='relative' style={{left: x, top: y, }}>
+    <motion.div className='absolute' style={{left: x, top: y, }}>
         <motion.div  className='relative bg-red-50 inline-block origin-top-center' style={{rotate: tilt}}>
             <img src={pin} className='absolute left-0 right-0 m-auto'/>
-            <img src={props.img} className='border-4'/>
+            <img src={props.img} className='border-4 max-w-xs'/>
         </motion.div>
         <PicInfo title="Hello" people = {["Paul", "Lah", "marcel", "lah", "sumanth", "lah"]} location= "Cool stuff!"/>
     </motion.div>

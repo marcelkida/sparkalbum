@@ -27,14 +27,16 @@ const HomeSection = (props) => {
         })
     }
 
+    console.log(dummyPic)
+
     return (
         <div className='h-[90vh] w-screen inline-block'>
             <div className=''>
                 {dummyPic.map(function(memory, index){
                     return(
-                        <>
+                        <div>
                             <Picture img = {memory.img} key={index} location={memory.location} title={memory.title}/>
-                        </>
+                        </div>
                     )
                 })}
             </div>
