@@ -3,7 +3,7 @@ import locationPin from '../assets/locpin.svg'
 
 const PicInfo = ({people, location, title}) => {
   return (
-    <div className='absolute bottom-0 w-48 z-[-1]'>
+    <div className='absolute bottom-0 w-48  my-2'>
         <div className="font-spaceGrotesk font-bold text-xl flex justify-start">
           <img src={locationPin} className='m-0'/>
           <p className='ml-1'>{title}</p>

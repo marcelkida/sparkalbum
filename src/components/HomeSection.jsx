@@ -22,14 +22,16 @@ const HomeSection = (props) => {
         <div className='h-[90vh] w-screen inline-block'>
             <div className=''>
                 {dummyPic.map(function(memory, index){
+                        const x = Math.random() * window.innerWidth * .9
+                        const y = Math.random() * (window.innerHeight * .9) / 2
                     return(
                         <>
-                            <Picture img = {memory.img} key={index} location={memory.location} title={memory.title}/>
+                            <Picture img = {memory.img} key={index} location={memory.location} title={memory.title} x={x} y={y}/>
                         </>
                     )
                 })}
             </div>
-            <div className='absolute bottom-0 p-8'>
+            <div className='absolute bottom-0 p-8 z-0'>
                     <h1 className='text-3xl'>
                         {props.title}
                     </h1>
