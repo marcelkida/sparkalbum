@@ -11,6 +11,7 @@ const Picture = (props) => {
     const y = Math.random() * (window.innerHeight * .9) / 2
     const a = Math.random() < 0.5 ? -1 : 1 * 10
 
+
     const { scrollY } = useScroll()
     const scrollVelocity = useVelocity(scrollY)
     const smoothVelocity = useSpring(scrollVelocity, { damping: 0, stiffness: 100, bounce: .5 })

@@ -2,21 +2,32 @@ import React from 'react'
 import Picture from './Picture'
 
 const HomeSection = (props) => {
-    const dummyPic = [
-        {
-            img: "https://picsum.photos/200/300",
-            location: "Singapore",
-            title: "Good time",
-            people: ["Paul", "Lah"]
-        },
-        {
-            img: "https://picsum.photos/200/200",
-            location: "Singapore",
-            title: "Good time",
-            people: ["Paul", "Lah"]
-        },
-        
+    const picUrls = [
+        "11iWjzooHB3iM8eGN4ZAkEuTRicFtBAT2",
+        "1cvu7z9lzpKicgtakbOTq-DdSeu2Icim2",
+        "1WoqfN90yoU79hwV-McCcFvKn5SYnybxF",
+        "1WoqfN90yoU79hwV-McCcFvKn5SYnybxF",
+        "1CxqFVYJ8K8VqalWsLhdSadwPaS3UWoMc",
+        "1EkiVTnzai5eZ75LSkKF7EPuSfAdPZB_8",
+        "1TJlgnl93RwalJJtOv0x5iNyyRic3wwuw",
+        "1udEPQt3BbiLEbe63pdhrOlNCrqF_0jPr",
+        "1J5l5XkAA3u5qmSrlvgpfvhXHWVKG53Xt",
+        "1X3RBdFY8KKcYhT6HAc0qlFfZ3FUXbgdt"
     ]
+
+    
+    const dummyPic = []
+
+    for (var i = 0; i <= picUrls.length; i ++) {
+        dummyPic.push({
+            img: "https://drive.google.com/uc?export=view&id=" + picUrls[i],
+            location: "Singapore",
+            title: "Good time",
+            people: ["Paul", "Lah"]
+        })
+    }
+
+    console.log(dummyPic)
 
     return (
         <div className='h-[90vh] w-screen inline-block'>
