@@ -6,13 +6,16 @@ const HomeSection = (props) => {
         {
             img: "https://picsum.photos/200/300",
             location: "Singapore",
+            title: "Good time",
             people: ["Paul", "Lah"]
         },
         {
             img: "https://picsum.photos/200/200",
             location: "Singapore",
+            title: "Good time",
             people: ["Paul", "Lah"]
-        }
+        },
+        
     ]
 
     return (
@@ -21,7 +24,7 @@ const HomeSection = (props) => {
                 {dummyPic.map(function(memory, index){
                     return(
                         <>
-                            <Picture img = {memory.img} key={index}/>
+                            <Picture img = {memory.img} key={index} location={memory.location} title={memory.title}/>
                         </>
                     )
                 })}
