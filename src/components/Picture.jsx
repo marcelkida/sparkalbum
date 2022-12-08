@@ -2,6 +2,7 @@ import { useVelocity, useScroll, useTransform, useSpring } from 'framer-motion'
 import React from 'react'
 import pin from '../assets/pin.png'
 import { motion } from 'framer-motion'
+import PicInfo from './PicInfo'
 
 
 const Picture = (props) => {
@@ -21,6 +22,7 @@ const Picture = (props) => {
             <img src={pin} className='absolute left-0 right-0 m-auto'/>
             <img src={props.img} className='border-4'/>
         </motion.div>
+        <PicInfo title="Hello" people = {["Paul", "Lah", "marcel", "lah", "sumanth", "lah"]} location= "Cool stuff!"/>
     </motion.div>
   )
 }

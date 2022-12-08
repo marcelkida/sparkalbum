@@ -6,6 +6,9 @@ module.exports = {
       transformOrigin: {
         'top-center': 'center top',
       }
+      fontFamily: {
+        'spaceGrotesk': ['Space Grotesk']
+      },
     },
   },
   plugins: [],
