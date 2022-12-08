@@ -18,7 +18,7 @@ const HomeSection = (props) => {
     
     const dummyPic = []
 
-    for (var i = 0; i <= picUrls.length; i ++) {
+    for (var i = 0; i < picUrls.length; i ++) {
         dummyPic.push({
             img: "https://drive.google.com/uc?export=view&id=" + picUrls[i],
             location: "Singapore",
@@ -33,7 +33,7 @@ const HomeSection = (props) => {
         <div className='h-[90vh] w-screen inline-block'>
             <div className=''>
                 {dummyPic.map(function(memory, index){
-                        const x = Math.random() * window.innerWidth * .9
+                        const x = Math.random() * window.innerWidth * .9 + window.innerWidth * props.index
                         const y = Math.random() * (window.innerHeight * .9) / 2
                     return(
                         <>
