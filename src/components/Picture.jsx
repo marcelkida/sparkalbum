@@ -16,6 +16,8 @@ const Picture = (props) => {
     const rand = Math.random() * 20
     const tilt = useTransform(smoothVelocity, [-1000, 1000], [-40 - rand, 40 + rand])
 
+    console.log(props.img)
+
     return (
     <motion.div className='relative' style={{left: x, top: y, }}>
         <motion.div  className='relative bg-red-50 inline-block origin-top-center' style={{rotate: tilt}}>
